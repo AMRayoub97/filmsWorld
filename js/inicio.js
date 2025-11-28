@@ -79,4 +79,18 @@
         }
     });
 
+    const buscarBtn = document.getElementById("buscarBtn");
+
+    buscarBtn.addEventListener('click', () => {
+        const inputBuscar = document.getElementById("inputBuscar").value.trim().toLowerCase();
+
+        if (!inputBuscar.length) return;
+
+        const resultados = allPelis.filter(peli =>
+            peli.title.toLowerCase().includes(inputBuscar)
+        );
+
+        generarTarjetas(resultados);
+    });
+
 })();

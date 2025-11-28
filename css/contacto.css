@@ -1,0 +1,248 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root{
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            background-color: gray;
+        }
+        body {
+            background: url('https://elements-resized.envatousercontent.com/elements-video-cover-images/files/1267e659-af37-4fd4-880a-adca7521f5af/inline_image_preview.jpg?w=1600&cf_fit=cover&q=85&format=auto&s=c0b134c3e6f4c7f69545d2cd984f5e922904d38c1ba4c9ec6a9e6bf95a60d52c') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        /* Cabecera */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-image: url("../imgs/banner.PNG");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 150px;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        header .logo,
+        header h1 {
+            position: relative;
+            z-index: 2;
+        }
+
+        header .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 1rem;
+            border-radius: 50%;
+        }
+        header .logo img:hover{
+            transform: scale(1.2);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            text-align: center;
+            flex: 1;
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffcc00;
+            padding: 0.5rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        header h1:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+        }
+
+
+        /* Navegación */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 0.5rem 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            width: 80%;
+            list-style: none;
+            gap: 2rem;
+            justify-content: space-evenly;
+        }
+
+        nav ul li {
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 0.3rem 0;
+        }
+        
+        nav ul li a{
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            left: 0;
+            bottom: -5px;
+            background: linear-gradient(90deg, #ffcc00, #ff6600);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        nav ul li:hover::after {
+            width: 100%;
+        }
+
+        nav ul li:hover {
+            transform: translateY(-3px);
+        }
+        nav ul li a:hover{     
+            color: #ffcc00;
+        }
+
+        nav .search-bar input {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+        }
+        main {
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+            background-color: rgba(0,0,0,0.5);
+            max-width: 900px;
+            margin: 2rem auto;
+            border-radius: 15px;
+        }
+
+        .contact h2 {
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.7rem 1rem;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background: #ffcc00;
+            color: #000;
+            font-weight: bold;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .contact-form button:hover {
+            background: #ff9900;
+        }
+
+        .contact-info {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1rem;
+            color: #ffcc00;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info ul li {
+            margin: 0.5rem 0;
+        }
+
+        .contact-info ul li a {
+            color: #ffcc00;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-info ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: rgba(0,0,0,0.8);
+            text-align: center;
+            padding: 1.5rem 2rem;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media(max-width: 768px){
+            nav ul {
+                gap: 1rem;
+            }
+            main {
+                padding: 1rem;
+            }
+        }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmsWorld</title>
+    <link rel="icon" type="image/png" href="./imgs/logo.PNG">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="logo">
+            <img src="./imgs/logo.PNG" alt="Logo">
+        </div>
+        <h1>FilmsWorld</h1>
+        <div style="width:50px;"></div>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./views/nosotros.html">Nosotros</a></li>
+            <li><a href="./views/contacto.html">Contacto</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar película...">
+            <input type="submit" value="Search">
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <script src="./js/inicio.js"></script>
+    <main>
+        <!-- Filtro -->
+        <div class="filter">
+            <select>
+                <option value="">Filtrar por género</option>
+                <option value="accion">Acción</option>
+                <option value="comedia">Comedia</option>
+                <option value="drama">Drama</option>
+                <option value="fantasia">Fantasía</option>
+            </select>
+        </div>
+
+        <!-- Grid de películas -->
+        <article class="movie-grid">
+            <script> generarTarjetas(allPelis); </script>
+            <div class="movie-card">
+                <img src="./imgs/logo.PNG" alt="Película 1">
+                <div class="content">
+                    <h3>Película 1</h3>
+                    <p>Descripción corta de la película 1.</p>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+        <a href="#">Nosotros</a>
+        <a href="#">GitHub</a>
+    </footer>
+    
+</body>
+</html>

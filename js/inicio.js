@@ -17,7 +17,7 @@
         movieGrid.innerHTML = '';
 
         allPelis.forEach(peli => {
-            const { title, overview, backdrop_path } = peli;
+            const { title, overview, backdrop_path,popularity,release_date,vote_average } = peli;
 
             const newDiv = document.createElement('div');
             newDiv.className = "movie-card";
@@ -37,6 +37,18 @@
             descripcion.textContent = overview ? overview.substring(0, 100) + '...' : 'Sin descripción';
             newDivContent.appendChild(descripcion);
 
+            const popu = document.createElement('p');
+            popu.textContent ="Popularity:" + (popularity ? popularity : 0);
+            newDivContent.appendChild(popu);
+
+            const releaseDate = document.createElement('p');
+            releaseDate.textContent ="Releas date:" + (release_date ? release_date : '0000-00-00');
+            newDivContent.appendChild(releaseDate);
+
+            const voteAverage = document.createElement('p');
+            voteAverage.textContent = "vote average:" + (vote_average ? vote_average : '0');
+            newDivContent.appendChild(voteAverage);
+
             newDiv.appendChild(newDivContent);
             movieGrid.appendChild(newDiv);
         });
@@ -48,4 +60,5 @@
     }
 
     init();
+
 })();
